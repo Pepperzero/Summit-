@@ -86,14 +86,34 @@ var swiper2 = new Swiper(".swiper.is-slider-centro", {
 
 var swiper3 = new Swiper(".swiper.is-slider-related-posts", {
   spaceBetween: 12,
-  slidesPerView: 4,
-  slidesPerGroup: 4,
+  slidesPerView: 1,
+  //slidesPerGroup: 4,
   centerInsufficientSlides: true,
   //loop: true,
   navigation: {
     nextEl: ".swiper-next",
     prevEl: ".swiper-prev",
     disabledClass: "is-disabled",
+  },
+  breakpoints: {
+    // when it gets bigger than 478px
+    478: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 12,
+    },
+    // when it gets bigger than 991px
+    768: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween: 12,
+    },
+    // when it gets bigger than 991px
+    991: {
+      slidesPerView: 4,
+      slidesPerGroup: 4,
+      spaceBetween: 12,
+    },
   },
 });
 
